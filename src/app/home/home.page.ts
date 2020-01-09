@@ -53,8 +53,4 @@ export class HomePage {
     console.log("Quiero una bien fria");
   }
 
-  // openAlert(){
-  //   console.log("Haz hecho click en un boton");
-    
-  // }
 }
