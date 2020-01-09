@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,53 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public alertController: AlertController) {}
 
+  async openAlert() {
+    const alert = await this.alertController.create({
+      header: 'Alert',
+      subHeader: 'Subtitle',
+      message: 'This is an alert message.',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
+  cardData = [
+    {
+      title: 'Hola Equipo',
+      subtitle: 'El agua es buena',
+      contentText: "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean."
+    },
+    {
+      title: 'Hola Equipo',
+      subtitle: 'El agua es buena',
+      contentText: "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean."
+    },
+    {
+      title: 'Hola Equipo',
+      subtitle: 'El agua es buena',
+      contentText: "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean."
+    },
+    {
+      title: 'Hola Equipo',
+      subtitle: 'El agua es buena',
+      contentText: "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean."
+    },
+    {
+      title: 'Hola Equipo',
+      subtitle: 'El agua es buena',
+      contentText: "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean."
+    }
+  ]
+
+  onBeerClicked(){
+    console.log("Quiero una bien fria");
+  }
+
+  // openAlert(){
+  //   console.log("Haz hecho click en un boton");
+    
+  // }
 }
