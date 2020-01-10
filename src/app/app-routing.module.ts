@@ -18,6 +18,10 @@ const routes: Routes = [
       .then( m => m.PublicPageModule),
     canActivate:[NotAuthenticatedGuard]
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({
